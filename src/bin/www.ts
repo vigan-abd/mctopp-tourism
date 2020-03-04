@@ -1,9 +1,8 @@
-/**
- * Module dependencies.
- */
+/* eslint-disable */
+require('module-alias/register')
 import app from '../app'
 import config from '@config'
-require('module-alias/register')
+/* eslint-enable */
 
 /**
  * Get port from environment and store in Express.
