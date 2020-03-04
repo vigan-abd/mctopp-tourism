@@ -4,7 +4,8 @@
   "description": "tourism trip planning app",
   "scripts": {
     "start": "tsc && NODE_ENV=development nodemon ./dist/bin/www.js",
-    "format": "standardx --fix --parser @typescript-eslint/parser --plugin @typescript-eslint/eslint-plugin src/**/*.ts"
+    "format": "standardx --fix --parser @typescript-eslint/parser --plugin @typescript-eslint/eslint-plugin src/**/*.ts",
+    "watch": "tsc --watch"
   },
   "repository": {
     "type": "git",
@@ -35,7 +36,6 @@
     "env-var": "^3.3.0",
     "express": "~4.16.0",
     "http-errors": "~1.6.2",
-    "jwt-simple": "^0.5.1",
     "module-alias": "^2.2.0",
     "node-env-file": "^0.1.8"
   },
