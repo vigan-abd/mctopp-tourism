@@ -13,7 +13,7 @@ import env from '@helpers/EnvHelper'
 import envFile = require('node-env-file');
 
 try {
-  envFile(path.join(__dirname, '.env'))
+  envFile(path.join(__dirname, '../../.env'))
 } catch (e) {
   console.log('No config file found')
 }

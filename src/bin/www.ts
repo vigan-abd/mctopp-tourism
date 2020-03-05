@@ -2,6 +2,7 @@
 require('module-alias/register')
 import app from '../app'
 import config from '@config'
+import logger from '@services/LoggerService'
 /* eslint-enable */
 
 /**
@@ -11,7 +12,7 @@ app.set('port', config.PORT)
 
 app.listen(config.PORT, config.HOST, (err: any) => {
   if (err) {
-    console.error('error', err, { tags: 'cron' })
+    logger.error(err, { tags: 'cron' })
   }
-  console.log('info', `[STARTUP] Server listening on ${config.HOST}:${config.PORT}`, { tags: 'startup,network' })
+  logger.info(`[STARTUP] Server listening on ${config.HOST}:${config.PORT}`, { tags: 'startup,network' })
 })

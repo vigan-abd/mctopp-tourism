@@ -8,6 +8,9 @@
       "@config/*": [
         "src/config/*"
       ],
+      "@containers/*": [
+        "src/containers/*"
+      ],
       "@controllers/*": [
         "src/controllers/*"
       ],
@@ -26,6 +29,12 @@
       "@repositories/*": [
         "src/repositories/*"
       ],
+      "@routes": [
+        "src/routes/index"
+      ],
+      "@routes/*": [
+        "src/routes/*"
+      ],
       "*": [ // types
         "src/@types/*"
       ]
@@ -36,11 +45,13 @@
     "outDir": "./dist",
     "strict": true,
     "strictNullChecks": true,
+    "strictPropertyInitialization": false,
     "noEmitOnError": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "watch": false,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   },
   "include": [
     "src/**/*.ts"

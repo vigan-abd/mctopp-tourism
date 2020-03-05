@@ -6,6 +6,7 @@ import HttpsMiddleware from '@middlewares/HttpsMiddleware'
 import CorsMiddleware from '@middlewares/CorsMiddleware'
 import ErrorResponseMiddleware from '@middlewares/ErrorResponseMiddleware'
 import config from '@config'
+import routes from '@routes';
 
 // APP SETUP
 const app = express()
@@ -24,6 +25,9 @@ app.use(express.urlencoded({ extended: false }))
 if (config.APP_ENV === 'production') {
   app.use(HttpsMiddleware)
 }
+
+// ROUTES
+app.use(routes.api())
 
 // 404 ERROR HANDLER
 app.use((req, res, next) => {
